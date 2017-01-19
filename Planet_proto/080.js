@@ -3,13 +3,17 @@
 //    set motors to 2
 // -> Create an instance of Robot called 'robby'
 
-__
+function Robot() {
+	this.motors = 2;
+}
+
+var robby = new Robot();
 
 // -> What is the result of `(robby instanceof Robot)`?
-claim((robby instanceof Robot), __);
+claim((robby instanceof Robot), true);
 
 // -> What is `robby.motors`?
-claim(robby.motors, __);
+claim(robby.motors, 2);
 
 
 // ------------------------------------------------
