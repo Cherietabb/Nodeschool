@@ -5,13 +5,10 @@
 //    an object of your own making, not the implicit 'this'.
 
 function Robot() {
-
 };
 function Vehicle() {
-	kind = 'vehicle'
+	return {};
 };
-var robby = new Robot();
-var motorcycle = Vehicle();
 
 // ------------------------------------------------
 // Common JS exports for verification, don't modify
