@@ -16,16 +16,16 @@ robot.__proto__ = machine;
 vehicle.__proto__ = machine;
 
 // -> What is `robot.parts`?
-claim(robot.parts, null);
+claim(robot.parts, []);
 
 // -> What is `vehicle.parts`?
-claim(vehicle.parts, null);
+claim(vehicle.parts, []);
 
 // -> What is `robot.capabilities`?
-claim(robot.capabilities, null);
+claim(robot.capabilities, {});
 
 // -> What is `vehicle.capabilities`?
-claim(vehicle.capabilities, null);
+claim(vehicle.capabilities, {});
 
 // -> Let's add a 'core' part to robot
 robot.parts.push('core');
