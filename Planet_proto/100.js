@@ -9,8 +9,8 @@ function Robot() {
 
 Robot.prototype.capabilities = [];
 
-var robby = new Robot();
-var cranky = new Robot();
+var robby = new Robot('Robby');
+var cranky = new Robot('Cranky');
 
 // -> Claim the result of robby.parts
 claim(robby.parts, []);
@@ -27,10 +27,9 @@ claim(cranky.capabilities, []);
 //    shared
 
 robby.parts = ['core'];
-robby.capabilities = ['fly'];
-cranky.capabilities = ['fly'];
-
-
+// robby.capabilities = ['fly'];
+// cranky.capabilities = ['fly'];
+Robot.prototype.capabilities = ['fly'];
 // -> Claim the result of robby.parts
 claim(robby.parts, ['core']);
 // -> Claim the result of cranky.parts
