@@ -1,17 +1,21 @@
 var express = require('express');
-   var app = express();
+var app = express();
 
-   app.set('port', (process.argv[2] || 3000));
-   app.set('view engine', 'jsx');
-   app.set('views', __dirname + '/views');
-   app.engine('jsx', require('express-react-views').createEngine({ transformViews: false }));
+app.set('port', (process.argv[2] || 3000));
+app.set('view engine', 'jsx');
+app.set('views', __dirname + '/views');
+app.engine('jsx', require('express-react-views').createEngine({transformViews: false}));
 
-   require('babel/register')({
-       ignore: false
-   });
+require('babel/register')({ignore: false});
 
-   app.use('/', function(req, res) {
-     res.render('index6', '');
-   });
+var data = [
+    {title: 'Shopping', detail: process.argv[3]},
+    {title: 'Hair cut', detail: process.argv[4]}
+];
+app.use('/', function(req, res) {
+    res.render('props_from_server', {data: data});
+});
 
-   app.listen(app.get('port'), function() {console.log('Learnyoureact is running in port 3000')});
+app.listen(app.get('port'), function() {
+    console.log('Learnyoureact is running in port 3000')
+});
