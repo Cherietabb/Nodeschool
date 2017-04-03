@@ -16,6 +16,4 @@ app.use('/', function(req, res) {
     res.render('props_from_server', {data: data});
 });
 
-app.listen(app.get('port'), function() {
-    console.log('Learnyoureact is running in port 3000')
-});
+app.listen(app.get('port'), function() {})
