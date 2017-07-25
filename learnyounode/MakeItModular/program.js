@@ -9,5 +9,4 @@ var callback = function (err, list) {
         console.log(file);
     })
 }
-
-// mymodule(dir, filterExtension, callback);
+myModule(dir, filterExtension, callback);
