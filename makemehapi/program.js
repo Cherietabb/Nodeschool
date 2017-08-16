@@ -1,5 +1,5 @@
-var Hapi = require('hapi');
-var server = new Hapi.Server();
+const Hapi = require('hapi');
+const server = new Hapi.Server();
 
 server.connection({
   host: 'localhost',
@@ -11,5 +11,5 @@ server.route({path: '/home', method: 'GET', handler: (request, reply) => {
 }});
 
 server.start(function() {
-  console.log('app running at: ', server.info.url);
-})
+  console.log('app running at: ', server.info.uri);
+});
